@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Adithya Kishor</title>
+        <meta charset="utf-8">
+        <meta http-equiv = "refresh" content = "4; url = ./main/about.html" />       
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" type="image/c-icon" href="./favicon.ico"/>
+        <style>
+            body {
+                --color-bg: #ddd;
+                --color-text: #1a1e24;
+                --color-text-subtle: #D76D77;
+
+                padding: 0; margin: 0;
+                background: -webkit-linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+                background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal"></div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js"></script>
+        <script>
+            var termynal = new Termynal('#termynal', {
+            typeDelay: 40,
+            lineDelay: 700,
+            lineData: [
+                { type: 'input', value: 'python -u user_website.py' },
+                { value: 'Website is online and ready!' },
+                { type: 'progress', value: 'loading', progressChar: '·' },
+                ]
+            });
+        </script>
+    </body>
+</html>
