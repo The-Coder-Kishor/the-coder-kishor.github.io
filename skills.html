@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adithya Kishor Personal Website">
+    <meta property="og:site_name" content="Adithya Kishor">
+    <meta property="og:title" content="The-Coder-Kishor" />
+    <meta property="og:url" content="https://the-coder-kishor.github.io" />
+    <meta property="og:description"
+        content="Adithya Kishor: CSD Freshman at IIIT Hyderabad and avid coder, quizzer and electronics hobbyist." />
+    <meta name="keywords"
+        content="Loyola School, LA FEST, Adithya Kishor, The Coder Kishor, The-Coder-Kishor, Trivandrum">
+    <title>Adithya Kishor</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="./index.html" class="logo">Skills</a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+        <ul class="navigation">
+            <li class="active"><a href="./index.html">ABOUT</a></li>
+            <li><a href="./journey.html">JOURNEY</a></li>
+            <li><a href="./achievements.html">ACHIEVEMENTS</a></li>
+            <li><a href="./experience.html">EXPERIENCE</a></li>
+            <li><a href="./skills.html">SKILLS</a></li>
+            <li><a href="./blogs.html">BLOGS</a></li>
+            <li><a href="./contact.html">CONTACT ME</a></li>
+            <li>
+                <label class="switch" for="switch">
+                    <input type="checkbox" id="switch" />
+                    <div class="sunmoon">
+                        <div class="darkside"></div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="clouds">
+                        <img src="./toggle/cloud_1.svg" alt="" class="cloud cloud-1" />
+                        <img src="./toggle/cloud_2.svg" alt="" class="cloud cloud-2" />
+                        <img src="./toggle/cloud_3.svg" alt="" class="cloud cloud-3" />
+                        <img src="./toggle/cloud_4.svg" alt="" class="cloud cloud-4" />
+                        <img src="./toggle/stars.svg" alt="" class="stars" />
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1>
+            A DAY IN REALITY <br>
+            AN EPOCH IN MEMORY
+        </h1>
+        <p id="demo"></p>
+
+    </div>
+
+    <ul class="social" style="flex-direction: row;">
+        <li><a href="https://www.youtube.com/channel/UC-2rdXxP10HKeRjbrIFm3UA/featured"><img
+                    src="images/152810.png"></a></li>
+        <li><a href="https://www.instagram.com/lafest.22"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+
+    </ul>
+
+    <script>
+        $('.js-tilt').tilt({
+            glare: true,
+            maxGlare: 1000,
+            reset: true,
+            scale: 1.1
+        })
+    </script>
+
+    <script src="./scripts.js"></script>
+</body>
+
+</html>

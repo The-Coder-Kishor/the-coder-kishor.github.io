@@ -44,24 +44,22 @@ header{
   align-items: center;
   z-index: 10000;
 }
-header.dark {
+body.dark header {
   background-color: var(--bg-color-dark);
 }
 
-
-header .logo,
-header .logo .dark {
-  color: purple;
-  font-family: 'Elianto';
-  font-weight: 700;
+header .logo {
+  color: black;
+  font-family: 'DSEG14';
+  font-weight: 750;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
 }
 
-header .logo .dark {
-  color: rgb(255, 255, 255);
+body.dark header .logo {
+  color: white;
 }
 
 header ul{
@@ -75,21 +73,33 @@ header ul li{
   margin-left: 20px;
 
 }
+
 header ul li a{
   text-decoration: none;
   padding: 6px 15px;
-  color: #ffffff;
+  color: black;
   border-radius: 20px;
   transition: 0.4s;
+}
+
+body.dark header ul li a{
+  color: white;
 }
 
 header ul li a:hover,
 header ul li a.active{
   transition: 0.2s;
   letter-spacing: 6px;
-  background: rgb(255, 255, 255) ;
+  background: rgb(0, 0, 0); 
+  color: rgb(255, 255, 255) ;
+}
+
+body.dark header ul li a:hover,
+body.dark header ul li a.active {
+  background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
+
 .container{
   background-color: var(--bg-color-light);
   height: 100vh;
@@ -101,7 +111,7 @@ header ul li a.active{
   overflow: hidden;
   position: relative;
 }
-.container.dark {
+body.dark .container {
   background-color: var(--bg-color-dark);
 }
 

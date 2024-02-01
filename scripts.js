@@ -1,22 +1,30 @@
 const toggleSwitch = document.querySelector(
     '.switch input[type="checkbox"]'
   );
-  const header = document.querySelector('header');
-  const container = document.querySelector('.container');
 
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.body.classList.add("dark");
-      header.classList.add("dark");
-      container.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-      header.classList.remove("dark");
-      container.classList.remove("dark");
-    }
+  function enableDarkMode() {
+    document.body.classList.add('dark');
+    localStorage.setItem('darkMode', 'true');
+  }
+  
+  function disableDarkMode() {
+    document.body.classList.remove('dark');
+    localStorage.setItem('darkMode', 'false');
   }
 
-  toggleSwitch.addEventListener("change", switchTheme, false);
+  function switchTheme(e) {
+    if (toggleSwitch.checked) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  }
+  const storedDarkMode = localStorage.getItem('darkMode');
+  const isDarkMode = storedDarkMode === 'true' || (!storedDarkMode && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  toggleSwitch.checked = isDarkMode; 
+  switchTheme();
+  toggleSwitch.addEventListener("change", switchTheme);
 
 function menuToggle()
 {
