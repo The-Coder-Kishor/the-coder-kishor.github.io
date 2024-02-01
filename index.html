@@ -1,49 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Adithya Kishor</title>
-        <meta charset="utf-8">
-        <meta http-equiv = "refresh" content = "4; url = ./main/about.html" />       
-        <!-- include the termynal stylesheet -->
-        <link rel="stylesheet" href="termynal.css">
-        <!-- some custom styles for the page -->
-        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" type="image/c-icon" href="./favicon.ico"/>
-        <style>
-            body {
-                --color-bg: #ddd;
-                --color-text: #1a1e24;
-                --color-text-subtle: #D76D77;
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="Adithya Kishor Personal Website" >
+    <meta property="og:site_name" content="Adithya Kishor">
+    <meta property="og:title" content="The-Coder-Kishor" />
+    <meta property="og:url" content="https://www.lafest.in" />
+    <meta property="og:description" content="The Colosseum reopens after an interlude of VI years. Here the fight isn’t over till only the winner stands. Legacy Repeats. The promised land awaits your arrival." />
+    <meta property="og:image" content="https://i.postimg.cc/yNSB7scn/image-2022-05-06-205636366.png"/>
+    <meta name="keywords" content="Loyola School, LA FEST, Adithya Kishor, The Coder Kishor, The-Coder-Kishor, Trivandrum">   
+    <script src="./scripts.js"></script>
+    <title>LA FEST 2022</title>
+</head>
+<body>
+    
+    <header>
+        <a href="../index.html" class="logo">ADITHYA KISHOR</a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+            <li class="active"><a href="../index.html" >HOME</a></li>
+            <li><a href="../Legacy/index.html">LEGACY</a></li>
+            <li><a href="../Events/index.html" >EVENTS</a></li>
+            <li><a href="../rules/index.html">RULES</a></li>
+            <li><a href="../aboutus/index.html">ABOUT US</a></li>
+            <li>
+                <label class="switch" for="switch">
+                    <input type="checkbox" id="switch" />
+                    <div class="sunmoon">
+                        <div class="darkside"></div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="clouds">
+                        <img src="./toggle/cloud_1.svg" alt="" class="cloud cloud-1" />
+                        <img src="./toggle/cloud_2.svg" alt="" class="cloud cloud-2" />
+                        <img src="./toggle/cloud_3.svg" alt="" class="cloud cloud-3" />
+                        <img src="./toggle/cloud_4.svg" alt="" class="cloud cloud-4" />
+                        <img src="./toggle/stars.svg" alt="" class="stars" />
+                    </div>
+                </label>
+            </li>
+            </ul>
+    </header>
+           
+    <div class="container">
 
-                padding: 0; margin: 0;
-                background: -webkit-linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-                background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-                width: 100%;
-                min-height: 100vh;
-                display: -webkit-box; display: -ms-flexbox; display: flex;
-                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
-                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
-                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- the termynal container -->
-        <div id="termynal"></div>
+       <a style="z-index:100;" href="https://www.youtube.com/watch?v=P0jNydBZyeE" target="_blank"><img  alt="logo" src="images/logo white.png" style="height:400px;width: auto;" class="logo js-tilt"/></a>
+        <h1>
+            A DAY IN REALITY <br>
+            AN EPOCH IN MEMORY
+        </h1>
+        <p id="demo"></p>
 
-        <!-- include and initialise termynal.js -->
-        <script src="termynal.js"></script>
-        <script>
-            var termynal = new Termynal('#termynal', {
-            typeDelay: 40,
-            lineDelay: 700,
-            lineData: [
-                { type: 'input', value: 'python -u user_website.py' },
-                { value: 'Website is online and ready!' },
-                { type: 'progress', value: 'loading', progressChar: '·' },
-                ]
-            });
-        </script>
-    </body>
+    </div>
+            </div>
+            <ul class="social" style="flex-direction: row;">            
+                <li ><a href="https://www.youtube.com/channel/UC-2rdXxP10HKeRjbrIFm3UA/featured"><img src="images/152810.png"></a></li>
+                <li><a href="https://www.instagram.com/lafest.22"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+
+            </ul>
+    
+    <script>
+        $('.js-tilt').tilt({
+            glare: true,
+            maxGlare: 1000,
+            reset: true,
+            scale: 1.1
+        })
+    </script>
+    <script type="text/javascript">
+        function menuToggle()
+        {
+        const toggleMenu = document.querySelector('.toggleMenu');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.classList.toggle('active')
+        navigation.classList.toggle('active')
+        }
+</script>
+
+<script>
+    const toggleSwitch = document.querySelector(
+      '.switch input[type="checkbox"]'
+    );
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
+      }
+    }
+
+    toggleSwitch.addEventListener("change", switchTheme, false);
+</script>
+</body>
 </html>

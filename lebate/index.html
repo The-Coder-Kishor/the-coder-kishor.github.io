@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>L'ebate</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/rose.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+
+
+<body>
+    <header>
+        <a href="../index.html" class="logo">LA FEST</a>
+        <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="../index.html" >HOME</a></li>
+                <li><a href="../Legacy/index.html">LEGACY</a></li>
+                <li><a href="../Events/index.html" class="active">EVENTS</a></li>                
+                <li><a href="../rules/index.html">RULES</a></li>
+                <li><a href="../aboutus/index.html">ABOUT US</a></li>
+            </ul>
+     </header>
+                <section>
+                    <img class="image" src="images/left.png" id="man_left">
+                    <img class="image" src="images/right.png" id="man_right">
+                     
+                     
+     
+                     <img src="images/color_pattern.png" id="back">
+     
+                     <a href="../Events/index.html" id="btn">Back to Events</a>
+                     
+                     <h2 id="text">L'ebate</h2>
+                 </section>
+                <div class="sec" id="sec">
+                    
+                                        <h2>
+                                            Tune into your inner scholars, and unleash all your knowledge in this battle of the words. Leave no fact unchecked as you try to pin down your opponents with your well-built opinions. Use all your verbal strength, and fasten your seatbelts for an engaging battle of wits.<br>
+
+
+
+                                        </h2> <br>
+                                        <h3>
+                                            Arm yourselves with sharp replies and defend yourselves with strong rebuttals in this debate event. Your statements can and will be used against you, so be alert. One moment of epiphany can make you the hero of this debate.<br><br>
+
+
+                                        </h3>
+                                        <h2>Rules:</h2>
+                                                            <p>
+                                                                                    1. Two participants per team.<br><br>
+                                        2. One offstage preliminary round will determine the four teams that would qualify for the  
+                                            Finals.<br><br>
+                                        3.   Only one team can represent each school.<br><br>
+                                        4. Prelims rules: Speakers will be allowed two minutes to deliver their points, after which the
+                                            opposition can ask questions for a maximum of four minutes. A maximum of three questions
+                                            are allowed.<br><br>
+                                        5. Finals rules: The proposing team will be given five minutes to deliver their points, after
+                                            which three opponents from any of the teams can ask one question each.<br><br>
+                                        6. Participants will not be allowed to change their stand during the course of the debate.<br><br>
+                                        7. No new arguments may be introduced in the rebuttal period. During the rebuttal session,
+                                            the speaker is not allowed to seek the help of his teammate.<br><br>
+                                        8. In the questioning period, the questioner may ask any fair, clear question that has a direct
+                                            bearing on the debate. Cross questioning is not allowed.<br><br>
+                                       
+                                        <br></p><br><br>
+                                                            <h2>
+                                            Judging Criteria:<br>
+                    </h2> <br>
+                    <p>
+                        1. Analysis<br><br>
+                        2. Evidence and reasoning<br><br>
+                        3. Organization of ideas<br><br>
+                        4. Mode of delivery (voice, language and deportment)<br><br>
+                        5. Command over the language<br><br>
+                        6. Adherence to the time limit<br><br>
+                        
+                        
+                        
+                    </p>
+
+
+                        
+                     </p>
+                </div>
+                <footer>
+                    <div style="font-size: 12px; display: flex; justify-content: center; width: 100%; padding: 5px 0px;">
+                        <div style="display: flex; align-items: center;"> 
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div >
+                       
+                        </div>
+                        </div>
+            
+                    <div style="font-size: 12px; display: flex; justify-content:left; width: 100%;padding: 10px 0;">
+                        <div > 
+                            <ul id="footer" style="list-style: none; display: flex; gap: 0 10px;">
+                                <li>Fr Roy Alex SJ : +91 8921472900</li>
+                                <li>Goutham S Nair: +91 9400272535</li>
+						
+                            </ul>
+                            <div style="align-items:left; list-style:none;padding: 0 -50px;">
+                                <li>Official email : <a href="mailto:lafest2023@gmail.com">lafest2023@gmail.com</a></li>
+                            </div>
+                        </div>
+                    </div>
+            
+                    
+                </footer> 
+                <script>
+                    let man_right=document.getElementById('man_right');
+                    let man_left=document.getElementById('man_left');
+                    
+                         window.addEventListener('scroll',function(){
+                        let value=window.scrollY;
+                        man_right.style.top=value*0.2+'px';
+                         man_left.style.top=value*0.2+'px';
+                         text.style.marginBottom=value*0.5+'px';
+                      })
+     
+                </script>
+                <script>
+                    function menuToggle()
+                        {
+                        const toggleMenu = document.querySelector('.toggleMenu');
+                        const navigation = document.querySelector('.navigation');
+                        toggleMenu.classList.toggle('active')
+                        navigation.classList.toggle('active')
+                        }
+                </script>
+
+          </body>
+    </html>
