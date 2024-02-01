@@ -1,33 +1,38 @@
 @font-face {
   font-family: 'Elianto';
-  src: url(fonts/Elianto-Regular.ttf);
+  src: url(./fonts/Elianto-Regular.otf);
   
 }
 @font-face{
   font-family: 'Russo';
-  src:url(fonts/Russo_One.ttf);
+  src:url(./fonts/Russo_One.ttf);
+}
+@font-face {
+  font-family: 'DSEG14';
+  src: url(./fonts/DSEG14Modern-Regular.woff2);
 }
 
-:root {
+*{
+  --bg-color-light: #7abdfd;
+  --bg-color-dark: #212632;
   margin: 0;
-  padding: auto;
+  padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd);
+  --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27);
+  --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff);
+  --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384);
   --switch-width: 75px;
   --switch-height: 32.5px;
   --switch-round: 25px;
   --switch-padding-x: 5px;
-  /* --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd); */
-  /* --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27); */
-  /* --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff); */
-  /* --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384); */
   --sunmoon-size: 22.5px;
   --transition: all 0.5s ease;  
 }
 
-
 header{
-  font-family: sans-serif;
+  background-color: var(--bg-color-light);
   font-weight: 600;
   position: absolute;
   top: 0;
@@ -39,27 +44,28 @@ header{
   align-items: center;
   z-index: 10000;
 }
-header .logo
-{
+header.dark {
+  background-color: var(--bg-color-dark);
+}
+
+
+header .logo,
+header .logo .dark {
   color: purple;
-  /* color: rgb(255, 255, 255); */
   font-family: 'Elianto';
-  font-weight:700;
+  font-weight: 700;
   text-decoration: none;
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-header .logo .dark{
+
+header .logo .dark {
   color: rgb(255, 255, 255);
-  font-family: 'Elianto';
-  font-weight:700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
+
 header ul{
+  font-family: 'DSEG14';
   display: flex;
   justify-content: right;
   align-items: center;
@@ -85,7 +91,7 @@ header ul li a.active{
   color: rgb(0, 0, 0);
 }
 .container{
-  background: white;
+  background-color: var(--bg-color-light);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -94,7 +100,9 @@ header ul li a.active{
   text-align: center;
   overflow: hidden;
   position: relative;
-  filter: invert(1);
+}
+.container.dark {
+  background-color: var(--bg-color-dark);
 }
 
 .container h1, .container img{
@@ -289,45 +297,16 @@ font-size: 3em;
 
 }
 
-/* :root {
-  --bg-color: #cde7ff;
-  --switch-width: 150px;
-  --switch-height: 65px;
-  --switch-round: 50px;
-  --switch-padding-x: 5px;
-  --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd);
-  --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27);
-  --border-width: 2px;
-  --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff);
-  --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384);
-  --sunmoon-size: 55px;
-  --transition: all 0.5s ease;
-} */
 
-:root {
-  --switch-width: 75px;
-  --switch-height: 32.5px;
-  --switch-round: 25px;
-  --switch-padding-x: 5px;
-  /* --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd); */
-  /* --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27); */
-  /* --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff); */
-  /* --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384); */
-  --sunmoon-size: 22.5px;
-  --transition: all 0.5s ease;  
-}
-
-/* 
-body {
+/* body {
   min-height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-color);
   transition: background-color 0.5s ease;
-} */
+} 
 
-/* body.dark {
+body.dark {
   --bg-color: #535c72;
 } */
 
