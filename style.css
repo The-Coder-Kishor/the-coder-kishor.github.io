@@ -1,169 +1,193 @@
-    @font-face {
-      font-family: 'Elianto';
-      src: url(fonts/Elianto-Regular.ttf);
-      
-    }
-    @font-face{
-      font-family: 'Russo';
-      src:url(fonts/Russo_One.ttf);
-    }
-    *{
-      margin: 0;
-      padding: 0px;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    header{
-      font-family: 'Elianto', sans-serif;
-      font-weight: 600;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10000;
-    }
-    header .logo
-    {
-      color: rgb(255, 255, 255);
-      font-weight:700;
-      text-decoration: none;
-      font-size: 2em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    header ul{
-      display: flex;
-      justify-content: right;
-      align-items: center;
-    }
-    header ul li{
-      list-style: none;
-      margin-left: 20px;
+@font-face {
+  font-family: 'Elianto';
+  src: url(fonts/Elianto-Regular.ttf);
+  
+}
+@font-face{
+  font-family: 'Russo';
+  src:url(fonts/Russo_One.ttf);
+}
 
-    }
-    header ul li a{
-      text-decoration: none;
-      padding: 6px 15px;
-      color: #ffffff;
-      border-radius: 20px;
-      transition: 0.4s;
-    }
+:root {
+  margin: 0;
+  padding: auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  --switch-width: 75px;
+  --switch-height: 32.5px;
+  --switch-round: 25px;
+  --switch-padding-x: 5px;
+  /* --switch-bg: linear-gradient(to bottom, #73bbff, #a2d1fd); */
+  /* --switch-dark-bg: linear-gradient(to top, #2b3347, #181d27); */
+  /* --border-gradient: linear-gradient(to bottom, #a2d1fd, #cde7ff); */
+  /* --border-dark-gradient: linear-gradient(to bottom, #000000, #6c7384); */
+  --sunmoon-size: 22.5px;
+  --transition: all 0.5s ease;  
+}
 
-    header ul li a:hover,
-    header ul li a.active{
-      transition: 0.2s;
-      letter-spacing: 6px;
-      background: rgb(255, 255, 255) ;
-      color: rgb(0, 0, 0);
-    }
-    .container{
-      background: white;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      overflow: hidden;
-      position: relative;
-      filter: invert(1);
-    }
 
-    .container h1, .container img{
-      
-      z-index: 20;
-      
-    }
-    .container img{
-      filter: invert(1);
-    }
-    .container h1{
-      font-family: 'Elianto';
-      
-    }
-    .container video{
-      position: absolute;
-      width: auto;
-      height: auto;
-      z-index: 0;
-      animation: invert 10s infinite;
-    }
+header{
+  font-family: sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .logo
+{
+  color: purple;
+  /* color: rgb(255, 255, 255); */
+  font-family: 'Elianto';
+  font-weight:700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header .logo .dark{
+  color: rgb(255, 255, 255);
+  font-family: 'Elianto';
+  font-weight:700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header ul{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+header ul li{
+  list-style: none;
+  margin-left: 20px;
+
+}
+header ul li a{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #ffffff;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+header ul li a:hover,
+header ul li a.active{
+  transition: 0.2s;
+  letter-spacing: 6px;
+  background: rgb(255, 255, 255) ;
+  color: rgb(0, 0, 0);
+}
+.container{
+  background: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  filter: invert(1);
+}
+
+.container h1, .container img{
+  
+  z-index: 20;
+  
+}
+.container img{
+  filter: invert(1);
+}
+.container h1{
+  font-family: 'Elianto';
+  
+}
+.container video{
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  animation: invert 10s infinite;
+}
    
-  .container p{
-    font-family: 'Russo', sans-serif;
-    z-index: 100;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 10px;
+.container p{
+  font-family: 'Russo', sans-serif;
+  z-index: 100;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+  .social
+  {
+    position: absolute;
+    z-index: 10;
+    bottom: 50%;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    
   }
 
-    .social
-    {
-      position: absolute;
-      z-index: 10;
-      bottom: 50%;
-      left: 20px;
-      justify-content: center;
-      align-items: center;
-      
+  .social li
+  {
+    list-style: none;
+  }
+  .social li a
+  {
+    display: inline-block;
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+  }
+  .social li a:hover
+  {
+    transform: scale(0.5) translateY(-15px);
+  }
+  .js-tilt{
+    transform-style: preserve-3d;
+  }
+  @media(max-width:550px){
+    .container img{
+      transform: scale(0.6);
+      margin-top: -10%;
+    }
+    .container h1{
+      font-size:1.5rem;
+      margin-top: -20%;
     }
 
-    .social li
-    {
-      list-style: none;
-    }
-    .social li a
-    {
-      display: inline-block;
-      filter: invert(1);
-      transform: scale(0.5);
-      transition: 0.5s;
-    }
-    .social li a:hover
-    {
-      transform: scale(0.5) translateY(-15px);
-    }
-    .js-tilt{
-      transform-style: preserve-3d;
-    }
-    @media(max-width:550px){
-      .container img{
-        transform: scale(0.6);
-        margin-top: -10%;
+      #footer{
+          flex-direction: column;    
       }
-      .container h1{
-        font-size:1.5rem;
-        margin-top: -20%;
-      }
+      .social
+          {
+          position: absolute;
+          z-index: 10;
+          bottom: 10px;
+          left: 40%;
+          justify-content: right;
+          align-items: center;
+          display:flex;
+          }
+  }
+  
 
-        #footer{
-            flex-direction: column;    
-        }
-        .social
-            {
-            position: absolute;
-            z-index: 10;
-            bottom: 10px;
-            left: 40%;
-            justify-content: right;
-            align-items: center;
-            display:flex;
-            }
+  
+  
+  @media (max-width:991px)
+  {
+    footer{
+      height:auto;
+      padding: 0px 30px;
     }
-    
-
-    
-    
-    @media (max-width:991px)
-    {
-      footer{
-        height:auto;
-        padding: 0px 30px;
-      }
   section
          {
              padding: 40px;
