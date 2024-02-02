@@ -1,19 +1,21 @@
 @font-face {
   font-family: 'Elianto';
   src: url(./fonts/Elianto-Regular.otf);
-  
+
 }
-@font-face{
+
+@font-face {
   font-family: 'Russo';
-  src:url(./fonts/Russo_One.ttf);
+  src: url(./fonts/Russo_One.ttf);
 }
+
 @font-face {
   font-family: 'DSEG14';
   src: url(./fonts/DSEG14Modern-Regular.woff2);
 }
 
-*{
-  --bg-color-light: #7abdfd;
+* {
+  --bg-color-light: #FDFEFF;
   --bg-color-dark: #212632;
   margin: 0;
   padding: 0px;
@@ -28,10 +30,10 @@
   --switch-round: 25px;
   --switch-padding-x: 5px;
   --sunmoon-size: 22.5px;
-  --transition: all 0.5s ease;  
+  --transition: all 0.5s ease;
 }
 
-header{
+header {
   background-color: var(--bg-color-light);
   font-weight: 600;
   position: absolute;
@@ -44,6 +46,7 @@ header{
   align-items: center;
   z-index: 10000;
 }
+
 body.dark header {
   background-color: var(--bg-color-dark);
 }
@@ -62,19 +65,20 @@ body.dark header .logo {
   color: white;
 }
 
-header ul{
+header ul {
   font-family: 'DSEG14';
   display: flex;
   justify-content: right;
   align-items: center;
 }
-header ul li{
+
+header ul li {
   list-style: none;
   margin-left: 20px;
 
 }
 
-header ul li a{
+header ul li a {
   text-decoration: none;
   padding: 6px 15px;
   color: black;
@@ -82,16 +86,16 @@ header ul li a{
   transition: 0.4s;
 }
 
-body.dark header ul li a{
+body.dark header ul li a {
   color: white;
 }
 
 header ul li a:hover,
-header ul li a.active{
+header ul li a.active {
   transition: 0.2s;
   letter-spacing: 6px;
-  background: rgb(0, 0, 0); 
-  color: rgb(255, 255, 255) ;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 body.dark header ul li a:hover,
@@ -100,7 +104,7 @@ body.dark header ul li a.active {
   color: rgb(0, 0, 0);
 }
 
-.container{
+.container {
   background-color: var(--bg-color-light);
   height: 100vh;
   display: flex;
@@ -111,31 +115,28 @@ body.dark header ul li a.active {
   overflow: hidden;
   position: relative;
 }
+
 body.dark .container {
   background-color: var(--bg-color-dark);
 }
 
-.container h1, .container img{
-  
+.container h1,
+.container img {
+
   z-index: 20;
-  
+
 }
-.container img{
+
+.container img {
   filter: invert(1);
 }
-.container h1{
+
+.container h1 {
   font-family: 'Elianto';
-  
+
 }
-.container video{
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  animation: invert 10s infinite;
-}
-   
-.container p{
+
+.container p {
   font-family: 'Russo', sans-serif;
   z-index: 100;
   text-align: center;
@@ -143,167 +144,164 @@ body.dark .container {
   margin-top: 10px;
 }
 
-  .social
-  {
-    position: absolute;
-    z-index: 10;
-    bottom: 50%;
-    left: 20px;
-    justify-content: center;
-    align-items: center;
-    
-  }
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 50%;
+  left: 20px;
+  justify-content: center;
+  align-items: center;
 
-  .social li
-  {
-    list-style: none;
-  }
-  .social li a
-  {
-    display: inline-block;
-    filter: invert(1);
-    transform: scale(0.5);
-    transition: 0.5s;
-  }
-  .social li a:hover
-  {
-    transform: scale(0.5) translateY(-15px);
-  }
-  .js-tilt{
-    transform-style: preserve-3d;
-  }
-  @media(max-width:550px){
-    .container img{
-      transform: scale(0.6);
-      margin-top: -10%;
-    }
-    .container h1{
-      font-size:1.5rem;
-      margin-top: -20%;
-    }
-
-      #footer{
-          flex-direction: column;    
-      }
-      .social
-          {
-          position: absolute;
-          z-index: 10;
-          bottom: 10px;
-          left: 40%;
-          justify-content: right;
-          align-items: center;
-          display:flex;
-          }
-  }
-  
-
-  
-  
-  @media (max-width:991px)
-  {
-    footer{
-      height:auto;
-      padding: 0px 30px;
-    }
-  section
-         {
-             padding: 40px;
-         }
-         header
-         {
-              padding: 20px 40px;
-        }
-        header .logo
-        {
-            top:5px;
-            position: relative;
-            padding: 0px;
-            font-size: 1.5em;
-        }
-        header ul
-        {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgb(0, 0, 0);
-            z-index: 1;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-            visibility: hidden;
-            opacity: 0;
-        }
-        header ul.active
-        {
-            visibility: visible;
-            opacity: 10;
-        }
-        header ul li a
-        {
-         display: inline-block;
-         color: #ffffff;
-         font-weight: 400;
-         margin-left: 0;
-         text-decoration: none;
-         font-size: 20px;
-         margin: 10px 0;
-        }
-        header ul li a:hover,
-        header ul li a.active
-{
-    background: rgb(255, 255, 255) ;
-    color: rgb(0, 0, 0);
 }
 
-.toggleMenu
-{
-  position: relative;
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+.js-tilt {
+  transform-style: preserve-3d;
+}
+
+@media(max-width:550px) {
+  .container img {
+    transform: scale(0.6);
+    margin-top: -10%;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    margin-top: -20%;
+  }
+
+  #footer {
+    flex-direction: column;
+  }
+
+  .social {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    left: 40%;
+    justify-content: right;
+    align-items: center;
+    display: flex;
+  }
+}
+
+
+
+
+@media (max-width:991px) {
+  footer {
+    height: auto;
+    padding: 0px 30px;
+  }
+
+  section {
+    padding: 40px;
+  }
+
+  header {
+    padding: 20px 40px;
+  }
+
+  header .logo {
+    top: 5px;
+    position: relative;
+    padding: 0px;
+    font-size: 1.5em;
+  }
+
+  header ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  header ul.active {
+    visibility: visible;
+    opacity: 10;
+  }
+
+  header ul li a {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    margin-left: 0;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  header ul li a:hover,
+  header ul li a.active {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+
+  .toggleMenu {
+    position: relative;
     width: 40px;
     height: 40px;
-    background: url(https://i.ibb.co/HrfVRcx/menu.png); 
-    background-position: center; 
-    background-repeat: no-repeat;         
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 30px;
     z-index: 2;
     cursor: pointer;
-}
-.text a
-{
+  }
 
-font-size: 1em;
-background: rgb(0, 0, 0);
-padding: 3px 10px;
-margin-left: 10px;
-text-transform: uppercase;
-text-decoration: none;
-font-weight: 500;
-color: #111;
-letter-spacing: 2px;
-transition: 0.2s;
-}
+  .text a {
 
-.toggleMenu.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);  
-  background-position: center; 
-  background-repeat: no-repeat;         
-  background-size: 25px;
-  
-}
-.content 
-        {
-            flex-direction: column;
-            margin-top: 80px;
-        }
+    font-size: 1em;
+    background: rgb(0, 0, 0);
+    padding: 3px 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+  }
 
-.content .textBox h2
-{
-font-size: 3em;
-}
+  .toggleMenu.active {
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+
+  }
+
+  .content {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .content .textBox h2 {
+    font-size: 3em;
+  }
 
 }
 
