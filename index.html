@@ -23,13 +23,13 @@
         <a href="../index.html" class="logo">KISHOR</a>
         <div class="toggleMenu" onclick="menuToggle();"></div>
         <ul class="navigation">
-            <li class="active"><a href="../index.html">ABOUT</a></li>
-            <li><a href="./journey.html">JOURNEY</a></li>
-            <li><a href="./achievements.html">ACHIEVEMENTS</a></li>
-            <li><a href="./experience.html">EXPERIENCE</a></li>
-            <li><a href="./skills.html">SKILLS</a></li>
-            <li><a href="./blogs.html">BLOGS</a></li>
-            <li><a href="./contact.html">CONTACT</a></li>
+            <li class="active"><a href="../index.html">/ABOUT</a></li>
+            <li><a href="./journey.html">/JOURNEY</a></li>
+            <li><a href="./achievements.html">/ACHIEVEMENTS</a></li>
+            <li><a href="./experience.html">/EXPERIENCE</a></li>
+            <li><a href="./skills.html">/SKILLS</a></li>
+            <li><a href="./blogs.html">/BLOGS</a></li>
+            <li><a href="./contact.html">/CONTACT</a></li>
             <li>
                 <label class="switch" for="switch">
                     <input type="checkbox" id="switch" />
@@ -49,8 +49,21 @@
         </ul>
     </header>
 
+
     <!--Add a simple hello terminal style-->
-    
+    <div class="container">
+        <div id="terminal">
+            <div id="output"></div>
+            <div id="prompt" class="blink">></div>
+        
+        </div>
+        <!-- <h1>
+            A DAY IN REALITY <br>
+            AN EPOCH IN MEMORY
+        </h1>
+        <p id="demo"></p> -->
+    </div>
+
 
     <script>
         $('.js-tilt').tilt({
@@ -62,6 +75,7 @@
     </script>
 
     <script src="./scripts.js"></script>
+    <script src="./terminal.js"></script>
 </body>
 
 </html>

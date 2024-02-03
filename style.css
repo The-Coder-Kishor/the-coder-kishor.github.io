@@ -14,6 +14,11 @@
   src: url(./fonts/DSEG14Modern-Regular.woff2);
 }
 
+@font-face {
+  font-family: 'JetBrains';
+  src: url(./fonts/JetBrainsMono-Regular.woff2);
+}
+
 * {
   --bg-color-light: #FDFEFF;
   --bg-color-dark: #212632;
@@ -87,7 +92,7 @@ header ul li {
 }
 
 header ul li a {
-  font-size: 1.2vw;
+  font-size: 1.11vw;
   text-decoration: none;
   padding: 0.3vw 0.8vw;
   color: black;
@@ -111,6 +116,78 @@ body.dark header ul li a:hover,
 body.dark header ul li a.active {
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+}
+
+.container{
+  color: black;
+  padding-top: 1vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  /* text-align: center; */
+  overflow: hidden;
+  position: relative;
+}
+
+#terminal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  font-family: 'JetBrains', monospace;
+  overflow-y: auto;
+}
+
+#output {
+  white-space: pre-wrap;
+}
+
+#prompt {
+  display: inline-block;
+  margin-right: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+body.dark .container {
+  color: white;
+}
+
+.container h1, .container img{
+  z-index: 20;
+}
+
+.container img{
+  filter: invert(1);
+}
+.container h1{
+  font-family: 'Elianto';
+  
+}
+
+.container video{
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  z-index: 0;
+  animation: invert 10s infinite;
+}
+
+.container p{
+font-family: 'Russo', sans-serif;
+z-index: 100;
+text-align: center;
+font-size: 25px;
+margin-top: 10px;
 }
 
 .js-tilt {
