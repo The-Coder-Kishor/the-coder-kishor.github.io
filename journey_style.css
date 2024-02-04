@@ -41,6 +41,18 @@ body {
     background-color: var(--bg-color-light);
 }
 
+.content-container {
+    font-family: 'JetBrains';
+    background-color: #000000;
+    color: white;
+}
+
+body.dark .content-container{
+    font-family: 'JetBrains';
+    background-color: white;
+    color: black;
+}
+
 body.dark {
     background-color: var(--bg-color-dark);
 }
