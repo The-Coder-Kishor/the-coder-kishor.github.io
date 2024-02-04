@@ -49,7 +49,7 @@ body.dark {
 header {
   background-color: var(--bg-color-light);
   font-weight: 600;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -118,38 +118,117 @@ body.dark header ul li a.active {
   color: rgb(0, 0, 0);
 }
 
-.container{
+.animated-text{
+  font-size: 35px;
+  max-width: 50vw;
+  padding-left: 50px;
+  padding-right: 0;
+  font-family: 'JetBrains', sans-serif;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.animated-text p {
   color: black;
-  padding-top: 1vh;
-  height: 100vh;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.animated-text a {
+  color: blue
+}
+
+body.dark .animated-text p {
+  color: white;
+}
+
+.animated-text span{
+  position: relative;
+}
+
+.animated-text span::before{
+  content: "Student";
+  color: #ff7f50;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #2f3542;
+  border-left: 2px solid #ff7f50;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+      content: "Student";
+  }
+  21%,40%{
+      content: "Developer";
+  }
+  41%,60%{
+      content: "Hacker";
+  }
+  61%,80%{
+      content: "Student";
+  }
+  81%,100%{
+      content: "Developer";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+.container {
+  color: black;
   width: 100vw;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  flex-direction: column;
-  /* text-align: center; */
+  flex-wrap: wrap;
   overflow: hidden;
   position: relative;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: center;
+  padding-left: 0;  
+}
+
+.image img {
+  width: 400px;
+  height: auto;
+}
 
 body.dark .container {
   color: white;
 }
 
-.container h1, .container img{
-  z-index: 20;
-}
 
-.container img{
-  filter: invert(1);
-}
-.container h1{
+.container h1 {
   font-family: 'Elianto';
-  
 }
 
-.container video{
+.container video {
   position: absolute;
   width: auto;
   height: 100vh;
@@ -157,22 +236,26 @@ body.dark .container {
   animation: invert 10s infinite;
 }
 
-.container p{
-font-family: 'Russo', sans-serif;
-z-index: 100;
-text-align: center;
-font-size: 25px;
-margin-top: 10px;
+.container p {
+  z-index: 100;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
 footer {
+  order: 3;
   width: 100vw;
   text-align: center;
   position: fixed;
   bottom: 0;
   font-family: 'JetBrains';
   color: black;
+  background-color: white;
   padding: 0.5vw;
+}
+
+body.dark footer {
+  background-color: var(--bg-color-dark);
 }
 
 .social-icons {
