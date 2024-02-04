@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Elianto';
-    src: url(fonts/Elianto-Regular.ttf);
+    src: url(./fonts/Elianto-Regular.otf);
+
 }
 
 @font-face {
@@ -41,18 +42,6 @@ body {
     background-color: var(--bg-color-light);
 }
 
-.content-container {
-    font-family: 'JetBrains';
-    background-color: #000000;
-    color: white;
-}
-
-body.dark .content-container {
-    font-family: 'JetBrains';
-    background-color: white;
-    color: black;
-}
-
 body.dark {
     background-color: var(--bg-color-dark);
 }
@@ -63,13 +52,12 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 100vw; */
     padding: 1.5vw 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
-    list-style: none;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
@@ -113,7 +101,6 @@ header ul li a {
     transition: 0.4s;
 }
 
-
 body.dark header ul li a {
     color: white;
 }
@@ -132,23 +119,76 @@ body.dark header ul li a.active {
     color: rgb(0, 0, 0);
 }
 
-section {
-    list-style: none;
-    grid-template-columns: repeat(3, 1fr);
+.js-tilt {
+    transform-style: preserve-3d;
 }
 
-.item {
-    bottom: 200px;
-    list-style: none;
-    background-color: gray;
-    height: 250px;
-    width: 100%;
-    border-radius: 20px;
+.container {
+    order: 1;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body.dark .container {
+    color: white;
+}
+
+#achievements {
+    font-family: 'JetBrains';
+    border-collapse: collapse;
+    width: 100vw;
+}
+
+#achievements td,
+#achievements th {
+    /* border: 1px solid #ddd; */
+    padding: 15px;
+}
+
+
+
+#achievements tr:hover {
+    background-color: black;
+    color: white;
+}
+
+#achievements th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}   
+
+#achievements tr {
+    text-align: left;
+}
+
+.container h1 {
+    font-family: 'Elianto';
+}
+
+.container video {
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    z-index: 0;
+    animation: invert 10s infinite;
+}
+
+.container p {
+    z-index: 100;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 footer {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    order: 3;
     width: 100vw;
     text-align: center;
     position: fixed;
@@ -157,6 +197,7 @@ footer {
     color: black;
     background-color: white;
     padding: 0.5vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 body.dark footer {
@@ -195,19 +236,31 @@ body.dark .made-with-love {
 }
 
 
-@media(max-width:1024px) {
-    * {
-        padding: 0px;
-    }
+.js-tilt {
+    transform-style: preserve-3d;
 }
 
-@media (max-width:991px) {
-    section {
-        padding: 40px;
+@media(max-width:550px) {
+    .container img {
+        transform: scale(0.6);
+        margin-top: -10%;
     }
 
+    .container h1 {
+        font-size: 1.5rem;
+        margin-top: -20%;
+    }
+
+}
+
+
+@media (max-width:1000px) {
     header {
         padding: 1.3vw 2vw;
+    }
+
+    footer {
+        position: relative;
     }
 
     header .logo {
@@ -259,14 +312,14 @@ body.dark .made-with-love {
 
     header ul li a:hover,
     header ul li a.active {
-        background-color: black;
-        color: rgb(255, 255, 255);
+        background: black;
+        color: white;
     }
 
     body.dark header ul li a:hover,
     body.dark header ul li a.active {
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
+        background: white;
+        color: black;
     }
 
     .toggleMenu {
@@ -306,21 +359,6 @@ body.dark .made-with-love {
         background-position: center;
         background-repeat: no-repeat;
         background-size: 25px;
-    }
-
-    .content {
-        flex-direction: column;
-        margin-top: 80px;
-    }
-
-    .content .textBox {
-        position: relative;
-        max-width: 100%;
-        padding-right: 20px;
-    }
-
-    .content .textBox h2 {
-        font-size: 3em;
     }
 }
 
