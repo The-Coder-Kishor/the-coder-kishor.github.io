@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./skills.css">
     <link rel="icon" href="./favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adithya Kishor Personal Website">
@@ -20,16 +20,15 @@
 <body>
 
     <header>
-        <a href="../index.html" class="logo">KISHOR</a>
+        <a href="../index.html" class="logo">ABOUT</a>
         <div class="toggleMenu" onclick="menuToggle();"></div>
         <ul class="navigation">
-            <li class="active"><a href="../index.html">/ABOUT</a></li>
+            <li><a href="../index.html">/ABOUT</a></li>
             <li><a href="./journey.html">/JOURNEY</a></li>
             <li><a href="./achievements.html">/ACHIEVEMENTS</a></li>
             <li><a href="./experience.html">/EXPERIENCE</a></li>
-            <li><a href="./skills.html">/SKILLS</a></li>
+            <li><a class="active" href="./skills.html">/SKILLS</a></li>
             <li><a href="./blogs.html">/BLOGS</a></li>
-            <li><a href="./contact.html">/CONTACT</a></li>
             <li>
                 <label class="switch" for="switch">
                     <input type="checkbox" id="switch" />
@@ -49,10 +48,60 @@
         </ul>
     </header>
 
-
-    <!--Add a simple hello terminal style-->
     <div class="container">
-        
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/python--v1.png" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/javascript--v1.png" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/git.png" alt="Image 3">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-item">
+            <img src="https://img.icons8.com/fluency/144/c-plus-plus-logo.png" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/java-coffee-cup-logo--v1.png" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/kotlin.png" alt="Image 3">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/arduino.png" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/raspberry-pi.png" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/docker.png" alt="Image 3">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/linux--v1.png" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/console  .png" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/html.png" alt="Image 3">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/css.png" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/rust-programming-language.png" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://img.icons8.com/color/144/c-programming.png" alt="Image 3">
+        </div>
     </div>
 
     <footer>
@@ -64,19 +113,12 @@
             <li><a href="https://twitter.com/AFoolishMan1" target="_blank"><img class="twitter-icon"></a></li>
             <li><a href="https://www.instagram.com/a.foolishman/" target="_blank"><img class="instagram-icon"></a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61550033885555&mibextid=kFxxJD" target="_blank"><img class="facebook-icon"></a></li>
+            <li><a href="mailto:adithya.kishor@research.iiit.ac.in"><img class="mail-icon"></a></li>
         </ul>
         <p class="made-with-love">Made with ❤️ by The-Coder-Kishor</p>
     </footer>
 
-    <script>
-        $('.js-tilt').tilt({
-            glare: true,
-            maxGlare: 1000,
-            reset: true,
-            scale: 1.1
-        })
-    </script>
-
+    
     <script src="./scripts.js"></script>
 </body>
 

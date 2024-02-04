@@ -9,6 +9,7 @@ const linkedinIcon = document.querySelector('.linkedin-icon');
 const facebookIcon = document.querySelector('.facebook-icon');
 const twitterIcon = document.querySelector('.twitter-icon');
 const instagramIcon = document.querySelector('.instagram-icon');
+const mailIcon = document.querySelector('.mail-icon');
 
 function enableDarkMode() {
   document.body.classList.add('dark');
@@ -30,6 +31,7 @@ function switchTheme(e) {
     facebookIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png';
     twitterIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png';
     instagramIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png';
+    mailIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/mail.png'
 
   } else {
     githubIcon.src = 'https://img.icons8.com/ios-filled/50/000000/github.png';
@@ -39,6 +41,7 @@ function switchTheme(e) {
     facebookIcon.src = 'https://img.icons8.com/ios-filled/50/000000/facebook-new.png';
     twitterIcon.src = 'https://img.icons8.com/ios-filled/50/000000/twitter.png';
     instagramIcon.src = 'https://img.icons8.com/ios-filled/50/000000/instagram-new.png';
+    mailIcon.src = 'https://img.icons8.com/ios-filled/50/000000/mail.png'
     disableDarkMode();
   }
 }
