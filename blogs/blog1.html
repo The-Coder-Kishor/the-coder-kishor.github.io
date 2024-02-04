@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linear Algebra</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/rose.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        #likeStatus {
+            font-size: 40px;
+            color: red;
+        }
+
+        #commentList {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2 id="text" style="font-size: 10vw;">Linear Algebra</h2>
+        <a href="../blogs.html" id="btn">Back to Blogs</a>
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Linear Algebra</h2> <br><br>
+        <p>Linear algebra is central to almost all areas of mathematics. For instance, linear algebra is fundamental in modern presentations of geometry, including for defining basic objects such as lines, planes and rotations. Also, functional analysis, a branch of mathematical analysis, may be viewed as the application of linear algebra to function spaces.
+        <br/>
+        Linear algebra is also used in most sciences and fields of engineering, because it allows modeling many natural phenomena, and computing efficiently with such models. For nonlinear systems, which cannot be modeled with linear algebra, it is often used for dealing with first-order approximations, using the fact that the differential of a multivariate function at a point is the linear map that best approximates the function near that point.
+        </p>
+
+        <button id="likeBtn" onclick="toggleLike()">Like/Unlike</button>
+        <span id="likeStatus">{{likedStatus}}</span>
+
+        <h2>Comments:</h2>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <textarea id="commentInput" placeholder="Add your comment"></textarea>
+        <button onclick="addComment()">Add Comment</button>
+        <ul id="commentList"></ul>
+    </div>
+
+    <script>
+        let likedStatus = localStorage.getItem('liked') === 'true';
+
+        document.getElementById('likeStatus').innerText = likedStatus ? '♥' : '♡';
+
+        function toggleLike() {
+            likedStatus = !likedStatus;
+
+            document.getElementById('likeStatus').innerText = likedStatus ? '♥' : '♡';
+
+            localStorage.setItem('liked', likedStatus.toString());
+        }
+
+        function addComment() {
+            let name = document.getElementById('nameInput').value;
+            let comment = document.getElementById('commentInput').value;
+
+            if (comment.trim() !== "") {
+                let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+                comments.push({ name: name, comment: comment });
+
+                localStorage.setItem('comments', JSON.stringify(comments));
+
+                displayComments();
+            }
+        }
+
+        function displayComments() {
+            let comments = JSON.parse(localStorage.getItem('comments')) || [];
+
+            let commentList = document.getElementById('commentList');
+
+            commentList.innerHTML = "";
+
+            comments.forEach(function (item) {
+                let li = document.createElement('li');
+                li.textContent = `${item.name}: ${item.comment}`;
+                commentList.appendChild(li);
+            });
+        }
+
+        displayComments();
+    </script>
+</body>
+
+</html>
