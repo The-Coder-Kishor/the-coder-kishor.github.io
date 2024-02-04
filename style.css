@@ -49,7 +49,7 @@ body.dark {
 header {
   background-color: var(--bg-color-light);
   font-weight: 600;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -132,31 +132,6 @@ body.dark header ul li a.active {
   position: relative;
 }
 
-#terminal {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  padding: 20px;
-  color: white;
-  font-family: 'JetBrains', monospace;
-  overflow-y: auto;
-}
-
-#output {
-  white-space: pre-wrap;
-}
-
-#prompt {
-  display: inline-block;
-  margin-right: 5px;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 
 body.dark .container {
   color: white;
@@ -190,6 +165,48 @@ font-size: 25px;
 margin-top: 10px;
 }
 
+footer {
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-family: 'JetBrains';
+  color: black;
+  padding: 0.5vw;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-icons img {
+  height: 25px;
+}
+
+.made-with-love {
+  color: #000000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+body.dark .made-with-love {
+  color: white;
+}
+
+
 .js-tilt {
   transform-style: preserve-3d;
 }
@@ -205,41 +222,19 @@ margin-top: 10px;
     margin-top: -20%;
   }
 
-  #footer {
-    flex-direction: column;
-  }
-
-  .social {
-    position: absolute;
-    z-index: 10;
-    bottom: 10px;
-    left: 40%;
-    justify-content: right;
-    align-items: center;
-    display: flex;
-  }
 }
 
 
 @media (max-width:1000px) {
-  footer {
-    height: auto;
-    padding: 0px 30px;
-  }
-
-  section {
-    padding: 40px;
-  }
-
   header {
-    padding: 20px 40px;
+    padding: 1.3vw 2vw;
   }
 
   header .logo {
-    top: 5px;
+    top: 0.1vh;
     position: relative;
-    padding: 0px;
-    font-size: 1.5em;
+    padding: 0vh;
+    font-size: 3.5vw;
   }
 
   header ul {
@@ -248,7 +243,6 @@ margin-top: 10px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0);
     z-index: 1;
     flex-direction: column;
     align-items: center;
@@ -265,25 +259,37 @@ margin-top: 10px;
 
   header ul li a {
     display: inline-block;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: black;
     font-weight: 400;
     margin-left: 0;
     text-decoration: none;
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 3vh;
+    margin: 2vh 0;
+  }
+
+  body.dark header ul li a {
+    color: white;
   }
 
   header ul li a:hover,
   header ul li a.active {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+  body.dark header ul li a:hover,
+  body.dark header ul li a.active {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
   }
 
   .toggleMenu {
+    /* color:rgb(0, 0, 0); */
     position: relative;
     width: 40px;
     height: 40px;
-    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background: url("https://img.icons8.com/ios-filled/50/000000/menu-squared-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
@@ -291,51 +297,32 @@ margin-top: 10px;
     cursor: pointer;
   }
 
-  .text a {
-
-    font-size: 1em;
-    background: rgb(0, 0, 0);
-    padding: 3px 10px;
-    margin-left: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    color: #111;
-    letter-spacing: 2px;
-    transition: 0.2s;
+  body.dark .toggleMenu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url("https://img.icons8.com/ios-filled/50/FFFFFF/menu-squared-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    z-index: 2;
+    cursor: pointer;
   }
 
   .toggleMenu.active {
-    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background: url("https://img.icons8.com/ios-filled/50/000000/delete-sign--v1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25px;
-
   }
 
-  .content {
-    flex-direction: column;
-    margin-top: 80px;
+  body.dark .toggleMenu.active {
+    background: url("https://img.icons8.com/ios-filled/50/FFFFFF/delete-sign--v1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
   }
-
-  .content .textBox h2 {
-    font-size: 3em;
-  }
-
 }
-
-
-/* body {
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--bg-color);
-  transition: background-color 0.5s ease;
-} 
-
-body.dark {
-  --bg-color: #535c72;
-} */
 
 .switch {
   position: relative;
