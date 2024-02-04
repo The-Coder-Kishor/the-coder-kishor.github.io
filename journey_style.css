@@ -70,6 +70,7 @@ header {
     align-items: center;
     z-index: 10000;
     list-style: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 body.dark header {
@@ -146,6 +147,7 @@ section {
 }
 
 footer {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     order: 3;
     width: 100vw;
     text-align: center;
@@ -257,7 +259,7 @@ body.dark .made-with-love {
 
     header ul li a:hover,
     header ul li a.active {
-        background-color: yellow;
+        background-color: black;
         color: rgb(255, 255, 255);
     }
 
