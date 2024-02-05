@@ -39,6 +39,7 @@
 }
 
 body{
+  min-height: 100vh;
   background-color: var(--bg-color-light);
 }
 
@@ -163,7 +164,7 @@ body.dark .container {
 footer {
   width: 100vw;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   font-family: 'JetBrains';
   color: black;
