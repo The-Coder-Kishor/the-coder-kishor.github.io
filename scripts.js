@@ -29,7 +29,7 @@ function switchTheme(e) {
     redditIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/reddit.png';
     linkedinIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png';
     facebookIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/facebook-new.png';
-    twitterIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/twitter.png';
+    twitterIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/twitterx--v1.png';
     instagramIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/instagram-new.png';
     mailIcon.src = 'https://img.icons8.com/ios-filled/50/FFFFFF/mail.png'
 
@@ -39,7 +39,7 @@ function switchTheme(e) {
     redditIcon.src = 'https://img.icons8.com/ios-filled/50/000000/reddit.png';
     linkedinIcon.src = 'https://img.icons8.com/ios-filled/50/000000/linkedin.png';
     facebookIcon.src = 'https://img.icons8.com/ios-filled/50/000000/facebook-new.png';
-    twitterIcon.src = 'https://img.icons8.com/ios-filled/50/000000/twitter.png';
+    twitterIcon.src = 'https://img.icons8.com/ios-filled/50/000000/twitterx--v1.png';
     instagramIcon.src = 'https://img.icons8.com/ios-filled/50/000000/instagram-new.png';
     mailIcon.src = 'https://img.icons8.com/ios-filled/50/000000/mail.png'
     disableDarkMode();
