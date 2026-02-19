@@ -1,6 +1,5 @@
 <script lang="ts">
   import { SITE } from '@/config';
-  import ThemeToggle from './ThemeToggle.svelte';
   import Search from './Search.svelte';
 
   interface NavLink {
@@ -28,7 +27,6 @@
     </a>
     <div class="flex items-center gap-2 lg:hidden">
       <Search />
-      <ThemeToggle />
     </div>
   </div>
 
@@ -46,7 +44,6 @@
     <div class="hidden lg:block h-4 w-px bg-border"></div>
     <div class="hidden lg:flex items-center gap-4">
       <Search />
-      <ThemeToggle />
     </div>
   </nav>
 </header>
