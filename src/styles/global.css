@@ -1,0 +1,200 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/* Futuristic / Retromodern Typography */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('@fontsource/outfit/files/outfit-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('@fontsource/outfit/files/outfit-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-standard-normal.woff2') format('woff2');
+}
+
+@theme {
+  /* Retromodern Palette - High Contrast, Clean, Technical */
+
+  --color-background: #080808;
+  /* Deep Matte Black */
+  --color-foreground: #e5e5e5;
+  /* Soft White */
+
+  --color-card: #111111;
+  --color-card-foreground: #ffffff;
+
+  --color-popover: #111111;
+  --color-popover-foreground: #ffffff;
+
+  --color-primary: #00f0ff;
+  /* Sharp Cyan */
+  --color-primary-foreground: #000000;
+
+  --color-secondary: #ffffff;
+  /* Stark White for accents */
+  --color-secondary-foreground: #000000;
+
+  --color-muted: #222222;
+  --color-muted-foreground: #888888;
+
+  --color-accent: #1a1a1a;
+  --color-accent-foreground: #00f0ff;
+
+  --color-destructive: #ff3333;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: #333333;
+  /* Dark Grey Borders */
+  --color-input: #222222;
+  --color-ring: #00f0ff;
+
+  /* Constants */
+  --font-sans: 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 0px;
+  /* Sharp corners for retro feel */
+  --radius-md: 0px;
+  --radius-sm: 0px;
+
+  /* Responsive Scaling */
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+}
+
+@layer base {
+  /* Force dark mode */
+  :root {
+    --color-background: #080808;
+    --color-foreground: #e5e5e5;
+    --color-card: #111111;
+    --color-card-foreground: #ffffff;
+    --color-popover: #111111;
+    --color-popover-foreground: #ffffff;
+    --color-primary: #00f0ff;
+    --color-primary-foreground: #000000;
+    --color-secondary: #ffffff;
+    --color-secondary-foreground: #000000;
+    --color-muted: #222222;
+    --color-muted-foreground: #888888;
+    --color-accent: #1a1a1a;
+    --color-accent-foreground: #00f0ff;
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #ffffff;
+    --color-border: #333333;
+    --color-input: #222222;
+    --color-ring: #00f0ff;
+  }
+
+  html {
+    font-size: clamp(16px, 0.5vw + 14px, 18px);
+    /* Slightly smaller base for cleaner look */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    /* Subtle grid background */
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-bold;
+    line-height: 1.1;
+    color: var(--color-foreground);
+    /* Solid color, no gradients */
+  }
+
+  a {
+    transition:
+      color 0.2s ease,
+      border-bottom 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    color: var(--color-primary);
+  }
+
+  *::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(10, 10, 10, 0.85);
+    /* Darker, less transparent */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .container-padding {
+    @apply px-6 sm:px-8 lg:px-12 xl:px-16 3xl:px-32;
+  }
+}
+
+/* Typography Overrides */
+.prose {
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-foreground);
+  --tw-prose-counters: var(--color-primary);
+  --tw-prose-bullets: var(--color-border);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-foreground);
+  --tw-prose-quote-borders: var(--color-border);
+  --tw-prose-captions: var(--color-muted-foreground);
+  --tw-prose-code: var(--color-primary);
+  --tw-prose-pre-bg: #111111;
+  font-size: 1.05rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--color-foreground);
+  font-weight: 800;
+}
+
+.prose code {
+  @apply rounded-none px-1 py-0.5 font-medium font-mono border whitespace-pre-wrap;
+  background-color: var(--color-muted);
+  border-color: var(--color-border);
+  color: var(--color-primary) !important;
+}
+
+.prose pre {
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  /* Sharp edges */
+}
