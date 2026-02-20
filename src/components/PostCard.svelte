@@ -1,7 +1,7 @@
 <script lang="ts">
   import { formatDate } from '@/lib/utils/date';
-  
-interface Props {
+
+  interface Props {
     post: {
       id: string;
       body?: string;
