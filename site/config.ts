@@ -83,7 +83,7 @@ export const SITE: SiteConfig = {
 
   // CTA (Call-to-Action) block for blog posts
   cta: {
-    enabled: true,
+    enabled: false,
     filePath: 'site/cta.md',
   },
 
@@ -95,11 +95,11 @@ export const SITE: SiteConfig = {
   // Giscus comments configuration
   // Get your configuration from https://giscus.app
   comments: {
-    enabled: false, // Set to true after filling in the IDs below
-    repo: 'alec-c4/spaceship', // Your GitHub repository
-    repoId: '', // Get from https://giscus.app - enter repo above and copy the value
+    enabled: true, // Set to true after filling in the IDs below
+    repo: 'The-Coder-Kishor/the-coder-kishor.github.io', // Your GitHub repository
+    repoId: 'R_kgDOLKIMBw', // Get from https://giscus.app - enter repo above and copy the value
     category: 'General', // GitHub Discussions category name
-    categoryId: '', // Get from https://giscus.app - select category and copy the value
+    categoryId: 'DIC_kwDOLKIMB84C230F', // Get from https://giscus.app - select category and copy the value
     mapping: 'pathname',
     reactionsEnabled: true,
     emitMetadata: false,
