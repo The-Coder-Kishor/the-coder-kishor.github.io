@@ -59,10 +59,10 @@ export const SITE: SiteConfig = {
   base: '/',
   website: 'https://afoolishman.com',
   social: {
-    x: 'https://x.com/yourhandle',
-    github: 'https://github.com/the-coder-kishor',
-    telegram: 'https://t.me/yourhandle',
-    facebook: 'https://facebook.com/yourhandle',
+    github: 'https://github.com/The-Coder-Kishor/',
+    linkedin: 'https://www.linkedin.com/in/afoolishman/',
+    instagram: 'https://www.instagram.com/a.foolishman',
+    email: 'mailto:info@afoolishman.com',
   },
   googleAnalyticsId: '', // Example: 'G-XXXXXXXXXX'
   homeHeroDescription:
